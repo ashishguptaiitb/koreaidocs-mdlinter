@@ -1,2 +1,3 @@
-# koreaidocs-mdlinter
-Keeping Markdown clean using a linter.
+# Use MD linting in docs
+
+Keep the Markdown clean using a linter!
