@@ -4,14 +4,10 @@ Keep the Markdown clean using a linter!
 
 ## Install
 
-Install the extension https://marketplace.visualstudio.com/items?itemName=DavidAnson.vscode-markdownlint.
-
-## Configure
-
-Create [this configuration file](.markdownlint.jsonc) locally or clone this repo.
-
-Create a pointer from within your docs repo to this file.
+Install the extension [markdownlint](https://marketplace.visualstudio.com/items?itemName=DavidAnson.vscode-markdownlint).
 
 ## Use
 
 The extension automatically loads and checks any files that you open in VSCode Editor. See the issues in the **View** > **Problems** or use the keyboard shortcut `Ctrl` + `Shift` + `M`.
+
+**Note**: Writers on the team don't have to do any configuration. I'll take care of it.
