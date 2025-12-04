@@ -18,28 +18,14 @@ To use this config file, pass the absolute path of the file to the command.
 
 Check all MD files in a folder and display the results on the `stdout`.
 
-`npx markdownlint-cli2 --config C:\Users\Ashish.Gupta\Documents\GitHub\koreaidocs-markdownlinter\.markdownlint.jsonc "**/*.md"`
+`npx markdownlint "**/*.md" --config "C:\Users\Ashish.Gupta\Documents\GitHub\koreaidocs-markdownlinter\.markdownlint.jsonc"`
 
 ---
 
 Check all MD files in a folder and save the results as a local .json file.
 
-`npx markdownlint-cli2 "**/*.md" > report.json`
+`pwsh .\mdlint-via-cli.ps1 -config "C:\Users\Ashish.Gupta\Documents\GitHub\koreaidocs-markdownlinter\.markdownlint.jsonc"`
 
 Convert the resulting .json file to a .csv file.
 
-```powershell
-Get-Content report.json | 
-  ConvertFrom-Json | 
-  ForEach-Object {
-    $_.results | ForEach-Object {
-      [PSCustomObject]@{
-        File      = $_.file
-        Line      = $_.lineNumber
-        Rule      = $_.ruleNames -join ";"
-        Message   = $_.ruleDescription
-      }
-    }
-  } | Export-Csv markdownlint-report.csv -NoTypeInformation
-```
-
+`pwsh ./json2csv.ps1 -jsonFile report.json`
