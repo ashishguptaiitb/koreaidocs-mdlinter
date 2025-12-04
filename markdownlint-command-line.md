@@ -8,11 +8,19 @@ On Windows command line, use `npm install --save-dev markdownlint-cli2`.
 
 ## Configure
 
-Create [this configuration file](.markdownlint.jsonc) locally or clone this repo.
+Create [this configuration file](.markdownlint.json) locally or clone this repo.
 
 To use this config file, pass the absolute path of the file to the command.
 
+`markdownlint-cli2 --config "<absolute path>" "**/*.md"`
+
 ## Use
+
+Check all MD files in a folder and display the results on the `stdout`.
+
+`npx markdownlint-cli2 --config C:\Users\Ashish.Gupta\Documents\GitHub\koreaidocs-markdownlinter\.markdownlint.jsonc "**/*.md"`
+
+---
 
 Check all MD files in a folder and save the results as a local .json file.
 
